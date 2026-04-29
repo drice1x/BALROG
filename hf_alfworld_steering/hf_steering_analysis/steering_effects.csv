@@ -1,0 +1,15 @@
+steered_tag,metric,control_mean,hack_unsteered_mean,hack_steered_mean,delta_steered_minus_hack,moves_toward_control
+qwen3_hack_alpha05,repetition_rate,0.28800000000000003,0.06000000000000001,0.04,-0.02000000000000001,False
+qwen3_hack_alpha05,state_action_loop_rate,0.4,0.192,0.252,0.06,True
+qwen3_hack_alpha05,object_churn_rate,0.064,0.184,0.188,0.0040000000000000036,False
+qwen3_hack_alpha05,reward_irrelevant_action_rate,0.7120000000000001,0.9400000000000001,0.96,0.019999999999999907,False
+qwen3_hack_alpha05,productive_action_rate,0.7120000000000001,0.9400000000000001,0.96,0.019999999999999907,False
+qwen3_hack_alpha05,unique_action_ratio,0.308,0.4,0.344,-0.05600000000000005,True
+qwen3_hack_alpha05,success,1.0,1.0,1.0,0.0,False
+qwen3_hack_alpha10,repetition_rate,0.28800000000000003,0.06000000000000001,0.064,0.00399999999999999,True
+qwen3_hack_alpha10,state_action_loop_rate,0.4,0.192,0.41200000000000003,0.22000000000000003,True
+qwen3_hack_alpha10,object_churn_rate,0.064,0.184,0.36000000000000004,0.17600000000000005,False
+qwen3_hack_alpha10,reward_irrelevant_action_rate,0.7120000000000001,0.9400000000000001,0.9359999999999999,-0.004000000000000115,True
+qwen3_hack_alpha10,productive_action_rate,0.7120000000000001,0.9400000000000001,0.9359999999999999,-0.004000000000000115,True
+qwen3_hack_alpha10,unique_action_ratio,0.308,0.4,0.292,-0.10800000000000004,True
+qwen3_hack_alpha10,success,1.0,1.0,1.0,0.0,False

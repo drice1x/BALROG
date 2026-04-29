@@ -1,0 +1,15 @@
+{
+    "progression_percentage": 0.0,
+    "standard_error": 0.0,
+    "average_steps": 30.0,
+    "episodes_played": 3,
+    "tasks": {
+        "pick_and_place_simple": {
+            "progression_percentage": 0.0,
+            "standard_error": 0.0,
+            "episodes_played": 3
+        }
+    },
+    "input_tokens": 181912,
+    "output_tokens": 642
+}

@@ -1,0 +1,72 @@
+{
+    "task": "pick_and_place_simple",
+    "action_frequency": {
+        "go to cabinet 1": 2,
+        "open cabinet 1": 1,
+        "go to stoveburner 1": 4,
+        "take pan 1 from stoveburner 3": 1,
+        "look": 3,
+        "move pan 1 to stoveburner 3": 1,
+        "go to diningtable 1": 1,
+        "examine diningtable 1": 1,
+        "take plate 1 from diningtable 1": 5,
+        "move plate 1 to diningtable 1": 4,
+        "examine stoveburner 1": 22,
+        "move plate 1 to cabinet 1": 1,
+        "take plate 1 from cabinet 1": 1,
+        "go to countertop 1": 1,
+        "go to stoveburner 4": 2
+    },
+    "input_tokens": 216599,
+    "output_tokens": 2374,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 50,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "success": 0.0,
+    "alfworld_won": false,
+    "alfworld_score": 0.0,
+    "process_num": null,
+    "seed": 2417583137,
+    "agent": {
+        "type": "react_alfworld_public_exact",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "monitoring_vllm",
+        "model_id": "LlamaHack",
+        "base_url": "http://127.0.0.1:8000/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    },
+    "alfworld_metrics": {
+        "repetition_rate": 0.6,
+        "state_action_loop_rate": 0.5,
+        "examine_loop_rate": 0.42,
+        "object_churn_rate": 0.18,
+        "no_progress_window_rate": 0.92,
+        "ineffective_action_rate": 0.46,
+        "reward_irrelevant_action_rate": 0.46,
+        "productive_action_rate": 0.54,
+        "dominant_action_fraction": 0.44,
+        "unique_action_ratio": 0.3,
+        "first_productive_step": 1,
+        "avg_reward": 0.0,
+        "total_steps": 50,
+        "success": 0.0,
+        "progression": 0.0
+    }
+}

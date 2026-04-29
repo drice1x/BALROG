@@ -2,7 +2,10 @@
 # environments with the correct wrappers.
 from gym import spaces
 
+from balrog.environments.alfworld.env import AlfWorldTextEnv
+#from balrog.environments.webshop.env import WebShopTextEnv
 from balrog.environments.env_wrapper import EnvWrapper
+
 
 
 def make_env(env_name, task, config, render_mode=None):
@@ -40,6 +43,14 @@ def make_env(env_name, task, config, render_mode=None):
         from balrog.environments.textworld.textworld_env import make_textworld_env
 
         base_env = make_textworld_env(env_name, task, config, render_mode=render_mode)
+    elif env_name == "alfworld":
+        base_env = AlfWorldTextEnv(task, config)
+        return EnvWrapper(base_env, env_name, task)
+
+    elif env_name == "webshop":
+        from balrog.environments.webshop.env import WebShopTextEnv
+        base_env = WebShopTextEnv(task, config)
+        return EnvWrapper(base_env, env_name, task)
     elif env_name == "babaisai":
         from balrog.environments.babaisai.babaisai_env import make_babaisai_env
 

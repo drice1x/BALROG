@@ -1,0 +1,1905 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,go to diningtable 2,go to diningtable 2,"You arrive at diningtable 2. On the diningtable 2, you see a bread 3, a bread 2, a butterknife 2, a butterknife 1, a dishsponge 1, a fork 2, a knife 2, a knife 1, a saltshaker 2, a soapbottle 1, and a spoon 1.
+
+Admissible commands:
+- examine diningtable 2
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look
+- take bread 2 from diningtable 2
+- take bread 3 from diningtable 2
+- take butterknife 1 from diningtable 2
+- take butterknife 2 from diningtable 2
+- take dishsponge 1 from diningtable 2
+- take fork 2 from diningtable 2
+- take knife 1 from diningtable 2
+- take knife 2 from diningtable 2
+- take saltshaker 2 from diningtable 2
+- take soapbottle 1 from diningtable 2
+- take spoon 1 from diningtable 2",0.0,False
+1,take knife 2 from diningtable 2,"take knife 2 from diningtable 2assistant
+
+Current Observation:
+You take the knife 2 from diningtable 2. You now","You pick up the knife 2 from the diningtable 2.
+
+Admissible commands:
+- examine diningtable 2
+- examine knife 2
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look
+- move knife 2 to diningtable 2
+- slice bread 2 with knife 2
+- slice bread 3 with knife 2",0.0,False
+2,slice bread 2 with knife 2,slice bread 2 with knife 2,"You sliced the bread 2 with the knife 2.
+
+Admissible commands:
+- examine diningtable 2
+- examine knife 2
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look
+- move knife 2 to diningtable 2
+- slice bread 2 with knife 2
+- slice bread 3 with knife 2",0.0,False
+3,go to stoveburner 4,"go to stoveburner 4assistant
+
+This action is necessary to put a hot plate in the diningtable, which is the original task","You arrive at stoveburner 4. On the stoveburner 4, you see a pot 1.
+
+Admissible commands:
+- examine knife 2
+- examine stoveburner 2
+- examine stoveburner 4
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 3
+- go to toaster 1
+- help
+- inventory
+- look",0.0,False
+4,examine stoveburner 4,examine stoveburner 4,"On the stoveburner 4, you see a pot 1.
+
+Admissible commands:
+- examine knife 2
+- examine stoveburner 2
+- examine stoveburner 4
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 3
+- go to toaster 1
+- help
+- inventory
+- look",0.0,False
+5,examine knife 2,examine pot 1,"There's nothing special about knife 2.
+
+Admissible commands:
+- examine knife 2
+- examine stoveburner 2
+- examine stoveburner 4
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 3
+- go to toaster 1
+- help
+- inventory
+- look",0.0,False
+6,go to stoveburner 3,"go to stoveburner 4 (to put a hot plate in diningtable, we need to find a hot plate first, and stoveburner 4","You arrive at stoveburner 3. On the stoveburner 3, you see a pan 1.
+
+Admissible commands:
+- examine knife 2
+- examine stoveburner 1
+- examine stoveburner 3
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 2
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look",0.0,False
+7,go to stoveburner 4,go to pot 1 on stoveburner 4,"You arrive at stoveburner 4. On the stoveburner 4, you see a pot 1.
+
+Admissible commands:
+- examine knife 2
+- examine stoveburner 2
+- examine stoveburner 4
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 3
+- go to toaster 1
+- help
+- inventory
+- look",0.0,False
+8,examine stoveburner 4,Examine stoveburner 4,"On the stoveburner 4, you see a pot 1.
+
+Admissible commands:
+- examine knife 2
+- examine stoveburner 2
+- examine stoveburner 4
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 3
+- go to toaster 1
+- help
+- inventory
+- look",0.0,False
+9,go to stoveburner 3,take pot 1 from stoveburner 4,"You arrive at stoveburner 3. On the stoveburner 3, you see a pan 1.
+
+Admissible commands:
+- examine knife 2
+- examine stoveburner 1
+- examine stoveburner 3
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 2
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look",0.0,False
+10,go to toaster 1,go to toaster 1,"You arrive at toaster 1. On the toaster 1, you see nothing.
+
+Admissible commands:
+- examine knife 2
+- examine toaster 1
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- help
+- inventory
+- look",0.0,False
+11,examine toaster 1,"examine toaster 1assistant
+
+No, examine toaster 1 is not a good next action because the observation already stated that there's","On the toaster 1, you see nothing.
+
+Admissible commands:
+- examine knife 2
+- examine toaster 1
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- help
+- inventory
+- look",0.0,False
+12,go to stoveburner 4,go to stoveburner 4,"You arrive at stoveburner 4. On the stoveburner 4, you see a pot 1.
+
+Admissible commands:
+- examine knife 2
+- examine stoveburner 2
+- examine stoveburner 4
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 3
+- go to toaster 1
+- help
+- inventory
+- look",0.0,False
+13,examine stoveburner 4,examine stoveburner 4,"On the stoveburner 4, you see a pot 1.
+
+Admissible commands:
+- examine knife 2
+- examine stoveburner 2
+- examine stoveburner 4
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 3
+- go to toaster 1
+- help
+- inventory
+- look",0.0,False
+14,go to stoveburner 3,go to stoveburner 3,"You arrive at stoveburner 3. On the stoveburner 3, you see a pan 1.
+
+Admissible commands:
+- examine knife 2
+- examine stoveburner 1
+- examine stoveburner 3
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 2
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look",0.0,False
+15,go to diningtable 2,Put a hot plate in diningtable.,"You arrive at diningtable 2. On the diningtable 2, you see a bread 3, a bread 2, a butterknife 2, a butterknife 1, a dishsponge 1, a fork 2, a knife 1, a saltshaker 2, a soapbottle 1, and a spoon 1.
+
+Admissible commands:
+- examine diningtable 2
+- examine knife 2
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look
+- move knife 2 to diningtable 2
+- slice bread 2 with knife 2
+- slice bread 3 with knife 2",0.0,False
+16,move knife 2 to diningtable 2,move knife 2 to diningtable 2,"You move the knife 2 to the diningtable 2.
+
+Admissible commands:
+- examine diningtable 2
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look
+- take bread 2 from diningtable 2
+- take bread 3 from diningtable 2
+- take butterknife 1 from diningtable 2
+- take butterknife 2 from diningtable 2
+- take dishsponge 1 from diningtable 2
+- take fork 2 from diningtable 2
+- take knife 1 from diningtable 2
+- take knife 2 from diningtable 2
+- take saltshaker 2 from diningtable 2
+- take soapbottle 1 from diningtable 2
+- take spoon 1 from diningtable 2",0.0,False
+17,take bread 2 from diningtable 2,take bread 2 from diningtable 2,"You pick up the bread 2 from the diningtable 2.
+
+Admissible commands:
+- examine bread 2
+- examine diningtable 2
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look
+- move bread 2 to diningtable 2",0.0,False
+18,examine bread 2,examine bread 2,"This is a sliced bread 2.
+
+Admissible commands:
+- examine bread 2
+- examine diningtable 2
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look
+- move bread 2 to diningtable 2",0.0,False
+19,examine bread 2,"examine knife 2
+
+Now that we have the sliced bread 2, it would be good to see if the knife 2 is usable","This is a sliced bread 2.
+
+Admissible commands:
+- examine bread 2
+- examine diningtable 2
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look
+- move bread 2 to diningtable 2",0.0,False
+20,go to toaster 1,go to toaster 1,"You arrive at toaster 1. On the toaster 1, you see nothing.
+
+Admissible commands:
+- examine bread 2
+- examine toaster 1
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- help
+- inventory
+- look",0.0,False
+21,examine toaster 1,"go to cabinet 4assistant
+
+No, that is not a valid action. 
+
+Let's try again. 
+
+Since we were examining","On the toaster 1, you see nothing.
+
+Admissible commands:
+- examine bread 2
+- examine toaster 1
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- help
+- inventory
+- look",0.0,False
+22,go to cabinet 1,go to cabinet 1,"You arrive at cabinet 1. The cabinet 1 is closed.
+
+Admissible commands:
+- examine bread 2
+- examine cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look
+- open cabinet 1",0.0,False
+23,open cabinet 1,open cabinet 1,"You open the cabinet 1. The cabinet 1 is open. In it, you see nothing.
+
+Admissible commands:
+- close cabinet 1
+- examine bread 2
+- examine cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look",0.0,False
+24,examine cabinet 1,examine cabinet 1,"The cabinet 1 is open. In it, you see nothing.
+
+Admissible commands:
+- close cabinet 1
+- examine bread 2
+- examine cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look",0.0,False
+25,close cabinet 1,close cabinet 1,"You close the cabinet 1.
+
+Admissible commands:
+- examine bread 2
+- examine cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look
+- open cabinet 1",0.0,False
+26,open cabinet 1,"open cabinet 1assistant
+
+To investigate what's inside the cabinet 1, it's best to open it again.","You open the cabinet 1. The cabinet 1 is open. In it, you see nothing.
+
+Admissible commands:
+- close cabinet 1
+- examine bread 2
+- examine cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look",0.0,False
+27,examine cabinet 1,examine cabinet 1,"The cabinet 1 is open. In it, you see nothing.
+
+Admissible commands:
+- close cabinet 1
+- examine bread 2
+- examine cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look",0.0,False
+28,go to cabinet 10,go to cabinet 10,"You arrive at cabinet 10. The cabinet 10 is closed.
+
+Admissible commands:
+- examine bread 2
+- examine cabinet 10
+- go to cabinet 1
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look
+- open cabinet 10",0.0,False
+29,open cabinet 10,open cabinet 10,"You open the cabinet 10. The cabinet 10 is open. In it, you see nothing.
+
+Admissible commands:
+- close cabinet 10
+- examine bread 2
+- examine cabinet 10
+- go to cabinet 1
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look",0.0,False
+30,examine cabinet 10,"examine cabinet 10assistant
+
+This will help determine why the cabinet 10 is empty.","The cabinet 10 is open. In it, you see nothing.
+
+Admissible commands:
+- close cabinet 10
+- examine bread 2
+- examine cabinet 10
+- go to cabinet 1
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look",0.0,False
+31,go to cabinet 11,Go to cabinet 11.,"You arrive at cabinet 11. The cabinet 11 is closed.
+
+Admissible commands:
+- examine bread 2
+- examine cabinet 11
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look
+- open cabinet 11",0.0,False
+32,open cabinet 11,open cabinet 11,"You open the cabinet 11. The cabinet 11 is open. In it, you see a plate 4.
+
+Admissible commands:
+- close cabinet 11
+- examine bread 2
+- examine cabinet 11
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look",0.0,False
+33,examine cabinet 11,examine plate 4,"The cabinet 11 is open. In it, you see a plate 4.
+
+Admissible commands:
+- close cabinet 11
+- examine bread 2
+- examine cabinet 11
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look",0.0,False
+34,go to toaster 1,go to plate 4,"You arrive at toaster 1. On the toaster 1, you see nothing.
+
+Admissible commands:
+- examine bread 2
+- examine toaster 1
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- help
+- inventory
+- look",0.0,False
+35,examine toaster 1,examine toaster 1,"On the toaster 1, you see nothing.
+
+Admissible commands:
+- examine bread 2
+- examine toaster 1
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- help
+- inventory
+- look",0.0,False
+36,examine bread 2,examine bread 2,"This is a sliced bread 2.
+
+Admissible commands:
+- examine bread 2
+- examine toaster 1
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- help
+- inventory
+- look",0.0,False
+37,go to countertop 1,go to countertop 1,"You arrive at countertop 1. On the countertop 1, you see a pan 1, a plate 2, a soapbottle 2, and a tomato 1.
+
+Admissible commands:
+- examine bread 2
+- examine countertop 1
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look
+- move bread 2 to countertop 1",0.0,False
+38,examine countertop 1,"examine countertop 1assistant
+
+(examining the countertop 1 reveals more details about the items on it)","On the countertop 1, you see a pan 1, a plate 2, a soapbottle 2, and a tomato 1.
+
+Admissible commands:
+- examine bread 2
+- examine countertop 1
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look
+- move bread 2 to countertop 1",0.0,False
+39,move bread 2 to countertop 1,move bread 2 to countertop 1,"You move the bread 2 to the countertop 1.
+
+Admissible commands:
+- examine countertop 1
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look
+- take bread 2 from countertop 1
+- take pan 1 from countertop 1
+- take plate 2 from countertop 1
+- take soapbottle 2 from countertop 1
+- take tomato 1 from countertop 1",0.0,False
+40,take tomato 1 from countertop 1,"take tomato 1 from countertop 1assistant
+
+This action will allow you to examine the tomato 1 more closely and potentially take further","You pick up the tomato 1 from the countertop 1.
+
+Admissible commands:
+- examine countertop 1
+- examine tomato 1
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look
+- move tomato 1 to countertop 1",0.0,False
+41,examine tomato 1,"examine tomato 1assistant
+
+This will allow me to get more information about the tomato 1, such as its condition and any other","There's nothing special about tomato 1.
+
+Admissible commands:
+- examine countertop 1
+- examine tomato 1
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look
+- move tomato 1 to countertop 1",0.0,False
+42,examine tomato 1,examine tomato 1,"There's nothing special about tomato 1.
+
+Admissible commands:
+- examine countertop 1
+- examine tomato 1
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to fridge 1
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look
+- move tomato 1 to countertop 1",0.0,False
+43,go to fridge 1,go to fridge 1,"You arrive at fridge 1. The fridge 1 is closed.
+
+Admissible commands:
+- cool tomato 1 with fridge 1
+- examine fridge 1
+- examine tomato 1
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look
+- open fridge 1",0.0,False
+44,open fridge 1,open fridge 1,"You open the fridge 1. The fridge 1 is open. In it, you see a lettuce 1, a mug 2, and a tomato 2.
+
+Admissible commands:
+- close fridge 1
+- cool tomato 1 with fridge 1
+- examine fridge 1
+- examine tomato 1
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look
+- move tomato 1 to fridge 1",0.0,False
+45,examine fridge 1,examine fridge 1,"The fridge 1 is open. In it, you see a lettuce 1, a mug 2, and a tomato 2.
+
+Admissible commands:
+- close fridge 1
+- cool tomato 1 with fridge 1
+- examine fridge 1
+- examine tomato 1
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look
+- move tomato 1 to fridge 1",0.0,False
+46,move tomato 1 to fridge 1,"move tomato 1 to fridge 1assistant
+
+This action will allow the tomato 1 to be stored in the fridge 1, potentially","You move the tomato 1 to the fridge 1.
+
+Admissible commands:
+- close fridge 1
+- examine fridge 1
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look
+- take lettuce 1 from fridge 1
+- take mug 2 from fridge 1
+- take tomato 1 from fridge 1
+- take tomato 2 from fridge 1",0.0,False
+47,take tomato 2 from fridge 1,"take tomato 2 from fridge 1assistant
+
+This action will allow us to examine the tomato 2 and potentially take further actions with it","You pick up the tomato 2 from the fridge 1.
+
+Admissible commands:
+- close fridge 1
+- cool tomato 2 with fridge 1
+- examine fridge 1
+- examine tomato 2
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look
+- move tomato 2 to fridge 1",0.0,False
+48,examine tomato 2,examine tomato 2,"There's nothing special about tomato 2.
+
+Admissible commands:
+- close fridge 1
+- cool tomato 2 with fridge 1
+- examine fridge 1
+- examine tomato 2
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look
+- move tomato 2 to fridge 1",0.0,False
+49,move tomato 2 to fridge 1,move tomato 2 to fridge 1,"You move the tomato 2 to the fridge 1.
+
+Admissible commands:
+- close fridge 1
+- examine fridge 1
+- go to cabinet 1
+- go to cabinet 10
+- go to cabinet 11
+- go to cabinet 2
+- go to cabinet 3
+- go to cabinet 4
+- go to cabinet 5
+- go to cabinet 6
+- go to cabinet 7
+- go to cabinet 8
+- go to cabinet 9
+- go to coffeemachine 1
+- go to countertop 1
+- go to countertop 2
+- go to diningtable 1
+- go to diningtable 2
+- go to drawer 1
+- go to drawer 2
+- go to drawer 3
+- go to garbagecan 1
+- go to microwave 1
+- go to sidetable 1
+- go to sinkbasin 1
+- go to stoveburner 1
+- go to stoveburner 2
+- go to stoveburner 3
+- go to stoveburner 4
+- go to toaster 1
+- help
+- inventory
+- look
+- take lettuce 1 from fridge 1
+- take mug 2 from fridge 1
+- take tomato 1 from fridge 1
+- take tomato 2 from fridge 1",0.0,True

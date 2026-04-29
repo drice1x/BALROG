@@ -34,7 +34,7 @@ BABYAI_ENVS += [
 ]
 
 
-def make_babyai_env(env_name, task, config, render_mode: Optional[str] = None):
+def make_babyai_envOLD(env_name, task, config, render_mode: Optional[str] = None):
     if task.startswith("BabyAI-MixedTrainLocal-v0/"):
         base_task, goal = task.split("/")
         while 1:
@@ -45,3 +45,30 @@ def make_babyai_env(env_name, task, config, render_mode: Optional[str] = None):
     env = BabyAITextCleanLangWrapper(env, **config.envs.babyai_kwargs)
 
     return env
+
+#from balrog.environments.babyai_text.wrappers import BabyAITextCleanLangWrapper
+
+
+def make_babyai_env(env_name, task, config, render_mode=None):
+    if "/" in task:
+        base_task, subtask = task.split("/", 1)
+    else:
+        base_task, subtask = task, None
+
+    # Standard BabyAI env directly
+    if "MixedTrainLocal" not in base_task:
+        env = gym.make(base_task, render_mode=render_mode)
+        env = BabyAITextCleanLangWrapper(env, **config.envs.babyai_kwargs)
+        return env
+
+    # BALROG mixed-task variant
+    while True:
+        env = gym.make(base_task, render_mode=render_mode)
+        if subtask is None:
+            break
+        if env.unwrapped.action_kinds[0].replace(" ", "_") == subtask:
+            break
+
+    env = BabyAITextCleanLangWrapper(env, **config.envs.babyai_kwargs)
+    return env
+

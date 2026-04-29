@@ -8,7 +8,13 @@ from .few_shot import FewShotAgent
 from .naive import NaiveAgent
 from .robust_naive import RobustNaiveAgent
 from .robust_cot import RobustCoTAgent
-
+from .custom_monitor import CustomMonitorAgent
+from .monitored_cot import MonitoredCoTAgent
+from .monitored_two_pass import MonitoredTwoPassAgent
+from balrog.agents.react_admissible import ReactAdmissibleAgent
+from balrog.agents.react_public import ReactPublicAgent
+from balrog.agents.react_alfworld_public_exact import ReactAlfworldPublicExactAgent
+from balrog.agents.react_ttc_monitored import ReactTTCMonitoredAgent
 
 class AgentFactory:
     """Factory class for creating agents based on configuration.
@@ -56,6 +62,22 @@ class AgentFactory:
             return RobustNaiveAgent(client_factory, prompt_builder)
         elif self.config.agent.type == "robust_cot":
             return RobustCoTAgent(client_factory, prompt_builder, config=self.config)
+        elif self.config.agent.type == "custom_monitor":
+            return CustomMonitorAgent(client_factory, prompt_builder, config=self.config)
+        elif self.config.agent.type == "monitored_cot":
+            return MonitoredCoTAgent(client_factory, prompt_builder, config=self.config)
+        elif self.config.agent.type == "monitored_two_pass":
+            return MonitoredTwoPassAgent(client_factory, prompt_builder, config=self.config)
+        elif self.config.agent.type == "react_admissible":
+            return ReactAdmissibleAgent(client_factory, prompt_builder, config=self.config)
+        elif self.config.agent.type == "react_public":
+            return ReactPublicAgent(client_factory, prompt_builder, config=self.config)
+        elif self.config.agent.type  == "react_alfworld_public_exact":
+            return ReactAlfworldPublicExactAgent(client_factory, prompt_builder, config=self.config)
+        elif self.config.agent.type  == "react_ttc_monitored":
+            return ReactTTCMonitoredAgent(client_factory, prompt_builder, config=self.config)
+
+
 
         else:
             raise ValueError(f"Unknown agent type: {self.config.agent}")

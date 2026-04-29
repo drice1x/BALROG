@@ -8,8 +8,8 @@ import os
 from collections import namedtuple
 from io import BytesIO
 
-from google import genai
-from google.genai import types
+
+
 
 from anthropic import Anthropic
 from openai import OpenAI
@@ -796,16 +796,37 @@ def create_llm_client(client_config):
 
     def client_factory():
         client_name_lower = client_config.client_name.lower()
-        if "openai" in client_name_lower or "vllm" in client_name_lower or "nvidia" in client_name_lower or "xai" in client_name_lower:
-            # NVIDIA and XAI use OpenAI-compatible API, so we use the OpenAI wrapper
+
+        # EXACT match first
+        if client_name_lower == "monitoring_vllm":
+            from balrog.clients.monitoring_vllm import MonitoringVLLMWrapper
+            return MonitoringVLLMWrapper(client_config)
+
+        elif client_name_lower == "monitoring_openai":
+            from balrog.clients.monitoring_openai import MonitoringOpenAIWrapper
+            return MonitoringOpenAIWrapper(client_config)
+
+        elif (
+            "openai" in client_name_lower
+            or "vllm" in client_name_lower
+            or "nvidia" in client_name_lower
+            or "xai" in client_name_lower
+        ):
             return OpenAIWrapper(client_config)
-        elif "gemini" in client_name_lower:
-            return GoogleGenerativeAIWrapper(client_config)
-        elif "claude" in client_name_lower:
-            return ClaudeWrapper(client_config)
-        elif "aws-bedrock" in client_name_lower:
-            return AWSBedrockWrapper(client_config)
+
+        elif client_name == "anthropic":
+            from balrog.clients.anthropic_client import AnthropicClient
+            return AnthropicClient(config.client)
+
+        elif client_name == "gemini":
+            from balrog.clients.gemini_client import GeminiClient
+            return GeminiClient(config.client)
+
+        elif client_name == "aws-bedrock":
+            from balrog.clients.bedrock_client import BedrockClient
+            return BedrockClient(config.client)
         else:
             raise ValueError(f"Unsupported client name: {client_config.client_name}")
 
     return client_factory
+

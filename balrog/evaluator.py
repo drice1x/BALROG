@@ -18,6 +18,13 @@ from balrog.agents.few_shot import FewShotAgent
 from balrog.dataset import InContextDataset
 from balrog.environments import make_env
 from balrog.utils import get_unique_seed
+from balrog.analysis.bad_action_labeler import StepLabeler
+from balrog.analysis.alfworld_metrics import (
+    AlfworldMetricsTracker,
+    metrics_to_dict,
+    step_labels_to_dict,
+)
+
 
 logger = logging.getLogger(__name__)
 
@@ -239,8 +246,14 @@ class Evaluator:
         self.num_workers = config.eval.num_workers
         self.max_steps_per_episode = config.eval.max_steps_per_episode
 
+        self.traj_dir = Path(config.eval.traj_dir)
+
         self.dataset = InContextDataset(self.config, self.env_name, original_cwd=original_cwd)
 
+    def _append_jsonl(self, path, row):
+        with open(path, "a", encoding="utf-8") as f:
+            f.write(json.dumps(row, ensure_ascii=False, default=str) + "\n")
+            
     def run_episode(self, task, agent, process_num=None, position=0, episode_idx=0):
         """Run a single evaluation episode.
 
@@ -256,13 +269,17 @@ class Evaluator:
         """
         env = make_env(self.env_name, task, self.config)
         agent.reset()
-
+        step_labeler= StepLabeler(self.env_name)
+        step_labeler.reset()
         seed = self.config.envs.env_kwargs.seed
         if seed is None:
             seed = get_unique_seed(process_num=process_num, episode_idx=episode_idx)
         random.seed(seed)
         np.random.seed(seed)
         obs, info = env.reset(seed=seed)
+        alfworld_metrics = None
+        if self.env_name == "alfworld":
+            alfworld_metrics = AlfworldMetricsTracker()
         episode_log = {
             "task": task,
             "action_frequency": defaultdict(int),
@@ -306,6 +323,7 @@ class Evaluator:
 
             action = None
             for step in range(max_steps_per_episode):
+                obs_before= copy.deepcopy(obs)
                 response = agent.act(obs, prev_action=action)
                 action = env.check_action_validity(response.completion)
                 reasoning = response.reasoning if hasattr(response, "reasoning") else ""
@@ -317,7 +335,78 @@ class Evaluator:
                 obs, reward, terminated, truncated, info = env.step(action)
                 done = terminated or truncated
 
+                step_labels = step_labeler.label_step(
+                    action=action,
+                    reward=reward,
+                    obs_before=obs_before,
+                    obs_after=obs,
+                    done=done,
+                    action_was_rewritten=(action != response.completion),
+                )
+
                 episode_return += reward
+                step_metric_labels = None
+                if self.env_name == "alfworld" and alfworld_metrics is not None:
+                    current_stats = env.get_stats()
+                    step_metric_labels = alfworld_metrics.update(
+                        obs_before=obs_before,
+                        obs_after=obs,
+                        action=action,
+                        reward=reward,
+                        success=bool(current_stats.get("success", 0.0) > 0),
+                        progression=float(current_stats.get("progression", 0.0)),
+                    )
+                
+                trace = None
+
+                # Preferred: trace attached to the response by the agent/client.
+                if hasattr(response, "agent_trace"):
+                    trace = getattr(response, "agent_trace", None)
+
+                # Fallback: agent stores last trace directly.
+                if trace is None and hasattr(agent, "last_trace"):
+                    trace = getattr(agent, "last_trace", None)
+
+                # Legacy fallback.
+                if trace is None and hasattr(agent, "pop_last_trace"):
+                    trace = agent.pop_last_trace()
+
+                traj_row = {
+                    "env_name": self.env_name,
+                    "task": task,
+                    "episode_idx": episode_idx,
+                    "step_idx": step,
+                    "seed": seed,
+                    "observation_after_step": obs,
+                    "reward": reward,
+                    "done": done,
+                    "terminated": terminated,
+                    "truncated": truncated,
+                    "info": info,
+                    "episode_return_so_far": episode_return,
+                    "model_action_raw": response.completion,
+                    "validated_action": action,
+                    "reasoning": reasoning,
+                    "input_tokens": response.input_tokens,
+                    "output_tokens": response.output_tokens,
+                    "observation_before_step": obs_before,
+                    "action_was_rewritten": action!=response.completion,
+                    
+                }
+                if step_metric_labels is not None:
+                    traj_row["alfworld_step_metrics"] = step_labels_to_dict(step_metric_labels)
+                traj_row.update(step_labels)
+                if trace is not None:
+                    traj_row["agent_trace"] = trace
+                    traj_row.update(trace)
+                                    
+
+                traj_path = self.traj_dir / self.env_name / task / f"{task}_run_{episode_idx:02d}.jsonl"
+                traj_path.parent.mkdir(parents=True, exist_ok=True)
+                if step == 0 and trace is not None:
+                    print("[TRACE DEBUG] keys:", list(trace.keys()))
+                self._append_jsonl(traj_path, traj_row)
+
 
                 # Give feedback on the action (if not valid)
                 obs["text"]["long_term_context"] = (
@@ -362,6 +451,17 @@ class Evaluator:
                 pbar.set_postfix_str("DONE")
             pbar.close()
 
+            final_stats = env.get_stats()
+
+            if self.env_name == "alfworld" and alfworld_metrics is not None:
+                episode_alfworld_metrics = alfworld_metrics.finalize(
+                    success=float(final_stats.get("success", 0.0)),
+                    progression=float(final_stats.get("progression", 0.0)),
+                    )
+            else:
+                episode_alfworld_metrics = None
+
+
             episode_log["episode_return"] = episode_return
             episode_log["num_steps"] = step + 1
             episode_log["failed_candidates"] = env.failed_candidates
@@ -370,6 +470,8 @@ class Evaluator:
             episode_log["seed"] = seed
             episode_log["agent"] = OmegaConf.to_container(self.config.agent, resolve=True)
             episode_log["client"] = OmegaConf.to_container(self.config.client, resolve=True)
+            if episode_alfworld_metrics is not None:
+                episode_log["alfworld_metrics"] = metrics_to_dict(episode_alfworld_metrics)
 
             # Save the episode_log to a JSON file
             json_filename = os.path.join(

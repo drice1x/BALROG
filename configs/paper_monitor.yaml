@@ -1,0 +1,21 @@
+agent:
+  type: custom_monitor
+  max_image_history: 0
+  max_text_history: 16
+
+client:
+  client_name: monitoring_vllm
+  model_id: hack
+  base_url: http://127.0.0.1:8000/v1
+  api_key: token-abc123
+  max_new_tokens: 256
+  temperature: 0.0
+  top_logprobs: 5
+
+eval:
+  num_workers: 1
+  traj_dir: balrog_monitor_runs
+  feedback_on_invalid_action: true
+
+# pick one environment family at a time
+env_name: babyai

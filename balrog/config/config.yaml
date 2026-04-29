@@ -18,6 +18,8 @@ eval:
     crafter: 10          # Number of episodes for the 'crafter' environment
     babaisai: 3          # Number of episodes for each 'babaisai' task
     textworld: 10        # Number of episodes for each 'textworld' task
+    alfworld: 5
+    webshop: 5
   max_steps_per_episode: null   # Max steps per episode; null uses the environment default
   save_trajectories: True       # Whether to save agent trajectories (text only)
   save_images: False            # Whether to save images from the environment
@@ -39,7 +41,7 @@ client:
   alternate_roles: False        # Whether the client requires alternating between the agent and the environment
 
 envs:
-  names: babyai-babaisai-textworld-crafter-nle-minihack   # Environments to evaluate, separated by hyphens
+  names: babyai-babaisai-textworld-crafter-nle-minihack-alfworld-webshop   # Environments to evaluate, separated by hyphens
   env_kwargs:
     seed: null                # Random seed; null means a random seed is used
   nle_kwargs:
@@ -82,8 +84,20 @@ envs:
     textworld_games_path: tw_games  
   babaisai_kwargs: 
     add_ruleset: True
+  alfworld_kwargs: {}
+  webshop_kwargs:
+    num_products: 1000
+    
 
 tasks:
+
+  alfworld_tasks:
+    - "pick_and_place_simple"
+    - "look_at_obj_in_light"
+
+  webshop_tasks:
+    - "default"
+
   nle_tasks:
     - NetHackChallenge-v0       # Tasks for the NLE environment
 

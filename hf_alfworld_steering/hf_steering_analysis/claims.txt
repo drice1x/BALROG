@@ -1,0 +1,10 @@
+qwen3_hack_alpha05: repetition_rate reduced from 0.060 to 0.040 (control=0.288, delta=-0.020).
+qwen3_hack_alpha05: state_action_loop_rate increased from 0.192 to 0.252 (control=0.400, delta=+0.060).
+qwen3_hack_alpha05: object_churn_rate increased from 0.184 to 0.188 (control=0.064, delta=+0.004).
+qwen3_hack_alpha05: reward_irrelevant_action_rate increased from 0.940 to 0.960 (control=0.712, delta=+0.020).
+qwen3_hack_alpha05: productive_action_rate preserved/increased: 0.940 -> 0.960 (control=0.712).
+qwen3_hack_alpha10: repetition_rate increased from 0.060 to 0.064 (control=0.288, delta=+0.004).
+qwen3_hack_alpha10: state_action_loop_rate increased from 0.192 to 0.412 (control=0.400, delta=+0.220).
+qwen3_hack_alpha10: object_churn_rate increased from 0.184 to 0.360 (control=0.064, delta=+0.176).
+qwen3_hack_alpha10: reward_irrelevant_action_rate reduced from 0.940 to 0.936 (control=0.712, delta=-0.004).
+qwen3_hack_alpha10: productive_action_rate preserved/increased: 0.940 -> 0.936 (control=0.712).
