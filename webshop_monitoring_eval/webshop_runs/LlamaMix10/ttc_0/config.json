@@ -1,0 +1,19 @@
+{
+  "webshop_root": "/home/patrick/vllmPatrickMonitoring/WebShop",
+  "base_url": "http://127.0.0.1:8000/v1",
+  "model_id": "LlamaMix10",
+  "api_key": "EMPTY",
+  "episodes": 50,
+  "max_steps": 20,
+  "reasoning_tokens": 0,
+  "action_tokens": 16,
+  "reasoning_temperature": 0.7,
+  "action_temperature": 0.0,
+  "num_products": 1000,
+  "reward_threshold": 0.5,
+  "min_inspect_steps": 2,
+  "outdir": "webshop_runs/LlamaMix10/ttc_0",
+  "effective_reasoning_tokens": 1,
+  "action_only_mode": true,
+  "adapter": "mix10"
+}

@@ -1,0 +1,17 @@
+{
+  "model": "FalconMix50",
+  "episodes": 12,
+  "avg_episode_return": 0.0,
+  "avg_num_steps": 15.0,
+  "results_page_reach_rate": 1.0,
+  "item_page_reach_rate": 1.0,
+  "asin_click_rate": 1.0,
+  "buy_rate": 0.0,
+  "nonzero_reward_rate": 0.0,
+  "bad_buy_rate": 0.0,
+  "early_buy_rate": 0.0,
+  "low_reward_buy_rate": 0.0,
+  "steering_rate": 0.6647916666666667,
+  "steering_risk_mean": 154.32659119556348,
+  "steering_risk_max": 1200.4256998697917
+}

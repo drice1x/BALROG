@@ -1,8 +1,9 @@
 from __future__ import annotations
 
-from contextlib import contextmanager
 from collections import defaultdict
 import torch
+
+from risk_steering import resolve_blocks
 
 
 class ActivationCollector:
@@ -20,29 +21,7 @@ class ActivationCollector:
         return hook
 
     def __enter__(self):
-        # robustly resolve transformer blocks across
-        # HF base model + PEFT wrapped model
-
-        model_ref = self.model
-
-        # unwrap PEFT if present
-        if hasattr(model_ref, "base_model"):
-            model_ref = model_ref.base_model
-
-        # common Qwen/Llama paths
-        if hasattr(model_ref, "model"):
-            if hasattr(model_ref.model, "layers"):
-                blocks = model_ref.model.layers
-            elif hasattr(model_ref.model, "model") and hasattr(model_ref.model.model, "layers"):
-                blocks = model_ref.model.model.layers
-            else:
-                raise RuntimeError(
-                    f"Could not find transformer layers. model structure: {type(model_ref)}"
-                )
-        else:
-            raise RuntimeError(
-                f"Unexpected model structure: {type(model_ref)}"
-            )
+        blocks = resolve_blocks(self.model)
 
         for l in self.layers:
             h = blocks[l].register_forward_hook(self._hook(l))
@@ -87,29 +66,7 @@ class ActivationSteerer:
         return hook
 
     def __enter__(self):
-        # robustly resolve transformer blocks across
-        # HF base model + PEFT wrapped model
-
-        model_ref = self.model
-
-        # unwrap PEFT if present
-        if hasattr(model_ref, "base_model"):
-            model_ref = model_ref.base_model
-
-        # common Qwen/Llama paths
-        if hasattr(model_ref, "model"):
-            if hasattr(model_ref.model, "layers"):
-                blocks = model_ref.model.layers
-            elif hasattr(model_ref.model, "model") and hasattr(model_ref.model.model, "layers"):
-                blocks = model_ref.model.model.layers
-            else:
-                raise RuntimeError(
-                    f"Could not find transformer layers. model structure: {type(model_ref)}"
-                )
-        else:
-            raise RuntimeError(
-                f"Unexpected model structure: {type(model_ref)}"
-            )
+        blocks = resolve_blocks(self.model)
 
         for l in self.layers:
             h = blocks[l].register_forward_hook(self._hook(l))

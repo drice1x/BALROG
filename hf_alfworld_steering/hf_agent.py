@@ -6,7 +6,7 @@ from difflib import get_close_matches
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import PeftModel
 
-from steering import ActivationSteerer
+from risk_steering import GatedActivationSteerer
 
 
 class HFSteeringAgent:
@@ -17,14 +17,15 @@ class HFSteeringAgent:
         device: str = "cuda",
         dtype: str = "bfloat16",
         directions: dict[int, torch.Tensor] | None = None,
+        direction_path: str | None = None,
         alpha: float = 0.0,
+        steering_mode: str = "always",
+        steering_tau: float = 0.0,
+        steering_token_scope: str = "last",
         reasoning_tokens: int = 32,
         action_tokens: int = 12,
         reasoning_temperature: float = 0.7,
         action_temperature: float = 0.0,
-        self.steering_mode = steering_mode
-        self.steering_tau = steering_tau
-        self.last_steering_summary = {}
     ):
         torch_dtype = torch.bfloat16 if dtype == "bfloat16" else torch.float16
 
@@ -42,8 +43,11 @@ class HFSteeringAgent:
         self.model.eval()
 
         self.device = device
-        self.directions = directions or {}
-        self.alpha = alpha
+        self.alpha = float(alpha)
+        self.steering_mode = steering_mode
+        self.steering_tau = float(steering_tau)
+        self.steering_token_scope = steering_token_scope
+        self.directions = self._load_directions(directions=directions, direction_path=direction_path)
 
         self.reasoning_tokens = reasoning_tokens
         self.action_tokens = action_tokens
@@ -51,9 +55,11 @@ class HFSteeringAgent:
         self.action_temperature = action_temperature
 
         self.history = []
+        self.last_steering_summary = self._default_steering_summary()
 
     def reset(self):
         self.history = []
+        self.last_steering_summary = self._default_steering_summary()
 
     def act(self, obs: dict):
         valid_actions = obs.get("admissible_commands", [])
@@ -72,25 +78,33 @@ class HFSteeringAgent:
         )
 
         action_prompt = self._build_action_prompt(task, observation, valid_actions, reasoning)
-        with ActivationSteerer(self.model, self.directions, self.alpha):
+        steerer = None
+        context = self._steering_context()
+        with context as steerer:
             raw_action = self._generate(
                 action_prompt,
                 max_new_tokens=self.action_tokens,
                 temperature=self.action_temperature,
                 do_sample=False,
             )
+        if steerer is not None:
+            self.last_steering_summary = steerer.summary()
+        else:
+            self.last_steering_summary = self._default_steering_summary()
 
         action = self._parse_action(raw_action)
         action = self._project_action(action, valid_actions, default_action)
 
-        self.history.append(
-            {
-                "observation": observation,
-                "reasoning": reasoning,
-                "raw_action": raw_action,
-                "action": action,
-            }
-        )
+        step_trace = {
+            "observation": observation,
+            "reasoning": reasoning,
+            "raw_action": raw_action,
+            "action": action,
+        }
+        if self.last_steering_summary:
+            step_trace["steering"] = dict(self.last_steering_summary)
+
+        self.history.append(step_trace)
 
         return action, reasoning, raw_action
 
@@ -134,6 +148,8 @@ Action:"""
     @torch.no_grad()
     def _generate(self, prompt, max_new_tokens, temperature, do_sample):
         inputs = self.tokenizer(prompt, return_tensors="pt").to(self.model.device)
+        # Falcon-family generation rejects token_type_ids.
+        inputs.pop("token_type_ids", None)
         out = self.model.generate(
             **inputs,
             max_new_tokens=max_new_tokens,
@@ -156,3 +172,49 @@ Action:"""
             return action
         match = get_close_matches(action, valid_actions, n=1, cutoff=0.75)
         return match[0] if match else default
+
+    def _load_directions(self, directions, direction_path):
+        if directions:
+            return directions
+        if not direction_path:
+            return {}
+
+        obj = torch.load(direction_path, map_location="cpu")
+        if isinstance(obj, dict) and "directions" in obj:
+            obj = obj["directions"]
+        if not isinstance(obj, dict):
+            raise ValueError(f"Direction file must contain a dict, got {type(obj)}")
+        return {int(layer): tensor for layer, tensor in obj.items()}
+
+    def _default_steering_summary(self):
+        return {
+            "steering_mode": self.steering_mode,
+            "steering_alpha": self.alpha,
+            "steering_tau": self.steering_tau,
+            "steering_token_scope": self.steering_token_scope,
+            "steering_num_seen": 0,
+            "steering_num_steered": 0,
+            "steering_rate": 0.0,
+            "steering_risk_mean": 0.0,
+            "steering_risk_max": 0.0,
+        }
+
+    def _steering_context(self):
+        if not self.directions or self.alpha == 0.0:
+            return _NullSteeringContext()
+        return GatedActivationSteerer(
+            self.model,
+            self.directions,
+            self.alpha,
+            mode=self.steering_mode,
+            tau=self.steering_tau,
+            token_scope=self.steering_token_scope,
+        )
+
+
+class _NullSteeringContext:
+    def __enter__(self):
+        return None
+
+    def __exit__(self, exc_type, exc, tb):
+        return False

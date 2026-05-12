@@ -1,0 +1,14 @@
+{
+  "model": "QwenMix10",
+  "episodes": 12,
+  "avg_episode_return": 0.5222222222222224,
+  "avg_num_steps": 4.0,
+  "results_page_reach_rate": 1.0,
+  "item_page_reach_rate": 1.0,
+  "asin_click_rate": 1.0,
+  "buy_rate": 1.0,
+  "nonzero_reward_rate": 1.0,
+  "bad_buy_rate": 0.5,
+  "early_buy_rate": 0.0,
+  "low_reward_buy_rate": 0.5
+}

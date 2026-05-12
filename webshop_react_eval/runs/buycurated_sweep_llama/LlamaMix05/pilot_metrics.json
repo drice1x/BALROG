@@ -1,0 +1,14 @@
+{
+  "model": "LlamaMix05",
+  "episodes": 12,
+  "avg_episode_return": 0.25416666666666665,
+  "avg_num_steps": 11.666666666666666,
+  "results_page_reach_rate": 1.0,
+  "item_page_reach_rate": 1.0,
+  "asin_click_rate": 1.0,
+  "buy_rate": 0.4166666666666667,
+  "nonzero_reward_rate": 0.4166666666666667,
+  "bad_buy_rate": 0.16666666666666666,
+  "early_buy_rate": 0.0,
+  "low_reward_buy_rate": 0.16666666666666666
+}

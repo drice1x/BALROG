@@ -1,0 +1,30 @@
+{
+  "webshop_root": "/home/patrick/vllmPatrickMonitoring/WebShop",
+  "base_url": "http://127.0.0.1:8000/v1",
+  "model_id": "LlamaControl",
+  "api_key": "EMPTY",
+  "episodes": 12,
+  "max_steps": 15,
+  "max_tokens": 100,
+  "temperature": 0.0,
+  "num_products": 1000,
+  "reward_threshold": 0.5,
+  "min_inspect_steps": 2,
+  "task_id": null,
+  "task_ids_file": "runs/task_scoring_QwenControl_0_199/curated_buy_task_ids.txt",
+  "outdir": "runs/buycurated_sweep_llama/LlamaControl",
+  "task_ids": [
+    55,
+    85,
+    116,
+    133,
+    95,
+    120,
+    0,
+    74,
+    109,
+    153,
+    154,
+    194
+  ]
+}

@@ -1,0 +1,356 @@
+{
+  "buy_t1": {
+    "pooled": {
+      "n": 541,
+      "positives": 34,
+      "base_rate": 0.06284658040665435,
+      "auroc": 0.790056851142824,
+      "average_precision": 0.15496839157509668,
+      "recall_at_10pct_flag": {
+        "flag_rate": 0.1,
+        "k": 55,
+        "recall": 0.29411764705882354,
+        "precision": 0.18181818181818182
+      },
+      "recall_at_20pct_flag": {
+        "flag_rate": 0.2,
+        "k": 109,
+        "recall": 0.5294117647058824,
+        "precision": 0.1651376146788991
+      }
+    },
+    "by_model": {
+      "LlamaControl": {
+        "n": 117,
+        "positives": 7,
+        "base_rate": 0.05982905982905983,
+        "auroc": 0.861038961038961,
+        "average_precision": 0.20874440685365053,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 12,
+          "recall": 0.2857142857142857,
+          "precision": 0.16666666666666666
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 24,
+          "recall": 0.7142857142857143,
+          "precision": 0.20833333333333334
+        }
+      },
+      "LlamaHack": {
+        "n": 85,
+        "positives": 9,
+        "base_rate": 0.10588235294117647,
+        "auroc": 0.32748538011695905,
+        "average_precision": 0.0874266845801202,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 9,
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 17,
+          "recall": 0.1111111111111111,
+          "precision": 0.058823529411764705
+        }
+      },
+      "LlamaMix05": {
+        "n": 128,
+        "positives": 5,
+        "base_rate": 0.0390625,
+        "auroc": 0.8536585365853658,
+        "average_precision": 0.13893964159410382,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 13,
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 26,
+          "recall": 1.0,
+          "precision": 0.19230769230769232
+        }
+      },
+      "LlamaMix10": {
+        "n": 72,
+        "positives": 10,
+        "base_rate": 0.1388888888888889,
+        "auroc": 0.9709677419354839,
+        "average_precision": 0.7488339438339439,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 8,
+          "recall": 0.7,
+          "precision": 0.875
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 15,
+          "recall": 0.9,
+          "precision": 0.6
+        }
+      },
+      "LlamaMix50": {
+        "n": 139,
+        "positives": 3,
+        "base_rate": 0.02158273381294964,
+        "auroc": 0.35784313725490197,
+        "average_precision": 0.040716628970800986,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 14,
+          "recall": 0.3333333333333333,
+          "precision": 0.07142857142857142
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 28,
+          "recall": 0.3333333333333333,
+          "precision": 0.03571428571428571
+        }
+      }
+    }
+  },
+  "bad_buy_t1": {
+    "pooled": {
+      "n": 541,
+      "positives": 12,
+      "base_rate": 0.022181146025878003,
+      "auroc": 0.6494959042218021,
+      "average_precision": 0.0337895995926027,
+      "recall_at_10pct_flag": {
+        "flag_rate": 0.1,
+        "k": 55,
+        "recall": 0.0,
+        "precision": 0.0
+      },
+      "recall_at_20pct_flag": {
+        "flag_rate": 0.2,
+        "k": 109,
+        "recall": 0.08333333333333333,
+        "precision": 0.009174311926605505
+      }
+    },
+    "by_model": {
+      "LlamaControl": {
+        "n": 117,
+        "positives": 2,
+        "base_rate": 0.017094017094017096,
+        "auroc": 0.7217391304347827,
+        "average_precision": 0.04369369369369369,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 12,
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 24,
+          "recall": 0.0,
+          "precision": 0.0
+        }
+      },
+      "LlamaHack": {
+        "n": 85,
+        "positives": 3,
+        "base_rate": 0.03529411764705882,
+        "auroc": 0.16666666666666666,
+        "average_precision": 0.027325970548862117,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 9,
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 17,
+          "recall": 0.0,
+          "precision": 0.0
+        }
+      },
+      "LlamaMix05": {
+        "n": 128,
+        "positives": 2,
+        "base_rate": 0.015625,
+        "auroc": 0.75,
+        "average_precision": 0.04470046082949308,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 13,
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 26,
+          "recall": 0.0,
+          "precision": 0.0
+        }
+      },
+      "LlamaMix10": {
+        "n": 72,
+        "positives": 4,
+        "base_rate": 0.05555555555555555,
+        "auroc": 0.8639705882352942,
+        "average_precision": 0.2014423076923077,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 8,
+          "recall": 0.25,
+          "precision": 0.125
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 15,
+          "recall": 0.75,
+          "precision": 0.2
+        }
+      },
+      "LlamaMix50": {
+        "n": 139,
+        "positives": 1,
+        "base_rate": 0.007194244604316547,
+        "auroc": 0.007246376811594203,
+        "average_precision": 0.007246376811594203,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 14,
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 28,
+          "recall": 0.0,
+          "precision": 0.0
+        }
+      }
+    }
+  },
+  "low_reward_buy_t1": {
+    "pooled": {
+      "n": 541,
+      "positives": 12,
+      "base_rate": 0.022181146025878003,
+      "auroc": 0.6494959042218021,
+      "average_precision": 0.0337895995926027,
+      "recall_at_10pct_flag": {
+        "flag_rate": 0.1,
+        "k": 55,
+        "recall": 0.0,
+        "precision": 0.0
+      },
+      "recall_at_20pct_flag": {
+        "flag_rate": 0.2,
+        "k": 109,
+        "recall": 0.08333333333333333,
+        "precision": 0.009174311926605505
+      }
+    },
+    "by_model": {
+      "LlamaControl": {
+        "n": 117,
+        "positives": 2,
+        "base_rate": 0.017094017094017096,
+        "auroc": 0.7217391304347827,
+        "average_precision": 0.04369369369369369,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 12,
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 24,
+          "recall": 0.0,
+          "precision": 0.0
+        }
+      },
+      "LlamaHack": {
+        "n": 85,
+        "positives": 3,
+        "base_rate": 0.03529411764705882,
+        "auroc": 0.16666666666666666,
+        "average_precision": 0.027325970548862117,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 9,
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 17,
+          "recall": 0.0,
+          "precision": 0.0
+        }
+      },
+      "LlamaMix05": {
+        "n": 128,
+        "positives": 2,
+        "base_rate": 0.015625,
+        "auroc": 0.75,
+        "average_precision": 0.04470046082949308,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 13,
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 26,
+          "recall": 0.0,
+          "precision": 0.0
+        }
+      },
+      "LlamaMix10": {
+        "n": 72,
+        "positives": 4,
+        "base_rate": 0.05555555555555555,
+        "auroc": 0.8639705882352942,
+        "average_precision": 0.2014423076923077,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 8,
+          "recall": 0.25,
+          "precision": 0.125
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 15,
+          "recall": 0.75,
+          "precision": 0.2
+        }
+      },
+      "LlamaMix50": {
+        "n": 139,
+        "positives": 1,
+        "base_rate": 0.007194244604316547,
+        "auroc": 0.007246376811594203,
+        "average_precision": 0.007246376811594203,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 14,
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 28,
+          "recall": 0.0,
+          "precision": 0.0
+        }
+      }
+    }
+  }
+}

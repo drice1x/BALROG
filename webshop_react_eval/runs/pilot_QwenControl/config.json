@@ -1,0 +1,28 @@
+{
+  "webshop_root": "/home/patrick/vllmPatrickMonitoring/WebShop",
+  "base_url": "http://127.0.0.1:8000/v1",
+  "model_id": "QwenControl",
+  "api_key": "EMPTY",
+  "episodes": 10,
+  "max_steps": 15,
+  "max_tokens": 100,
+  "temperature": 0.0,
+  "num_products": 1000,
+  "reward_threshold": 0.5,
+  "min_inspect_steps": 2,
+  "task_id": null,
+  "task_ids_file": "/home/patrick/vllmPatrickMonitoring/BALROG/webshop_react_eval/curated_task_ids.txt",
+  "outdir": "runs/pilot_QwenControl",
+  "task_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ]
+}

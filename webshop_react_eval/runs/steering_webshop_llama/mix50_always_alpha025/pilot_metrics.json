@@ -1,0 +1,17 @@
+{
+  "model": "LlamaMix50",
+  "episodes": 12,
+  "avg_episode_return": 0.23055555555555554,
+  "avg_num_steps": 10.916666666666666,
+  "results_page_reach_rate": 1.0,
+  "item_page_reach_rate": 1.0,
+  "asin_click_rate": 1.0,
+  "buy_rate": 0.4166666666666667,
+  "nonzero_reward_rate": 0.4166666666666667,
+  "bad_buy_rate": 0.16666666666666666,
+  "early_buy_rate": 0.0,
+  "low_reward_buy_rate": 0.16666666666666666,
+  "steering_rate": 1.0,
+  "steering_risk_mean": -2.49264479559691,
+  "steering_risk_max": 10.92492147286733
+}

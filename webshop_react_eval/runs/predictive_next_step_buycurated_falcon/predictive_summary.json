@@ -1,0 +1,356 @@
+{
+  "buy_t1": {
+    "pooled": {
+      "n": 781,
+      "positives": 10,
+      "base_rate": 0.012804097311139564,
+      "auroc": 0.9093385214007782,
+      "average_precision": 0.1248802240661003,
+      "recall_at_10pct_flag": {
+        "flag_rate": 0.1,
+        "k": 79,
+        "recall": 0.5,
+        "precision": 0.06329113924050633
+      },
+      "recall_at_20pct_flag": {
+        "flag_rate": 0.2,
+        "k": 157,
+        "recall": 0.9,
+        "precision": 0.05732484076433121
+      }
+    },
+    "by_model": {
+      "FalconControl": {
+        "n": 168,
+        "positives": 0,
+        "base_rate": 0.0,
+        "auroc": null,
+        "average_precision": null,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 17,
+          "recall": null,
+          "precision": null
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 34,
+          "recall": null,
+          "precision": null
+        }
+      },
+      "FalconHack": {
+        "n": 109,
+        "positives": 10,
+        "base_rate": 0.09174311926605505,
+        "auroc": 0.693939393939394,
+        "average_precision": 0.18586006598075688,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 11,
+          "recall": 0.3,
+          "precision": 0.2727272727272727
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 22,
+          "recall": 0.4,
+          "precision": 0.18181818181818182
+        }
+      },
+      "FalconMix05": {
+        "n": 168,
+        "positives": 0,
+        "base_rate": 0.0,
+        "auroc": null,
+        "average_precision": null,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 17,
+          "recall": null,
+          "precision": null
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 34,
+          "recall": null,
+          "precision": null
+        }
+      },
+      "FalconMix10": {
+        "n": 168,
+        "positives": 0,
+        "base_rate": 0.0,
+        "auroc": null,
+        "average_precision": null,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 17,
+          "recall": null,
+          "precision": null
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 34,
+          "recall": null,
+          "precision": null
+        }
+      },
+      "FalconMix50": {
+        "n": 168,
+        "positives": 0,
+        "base_rate": 0.0,
+        "auroc": null,
+        "average_precision": null,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 17,
+          "recall": null,
+          "precision": null
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 34,
+          "recall": null,
+          "precision": null
+        }
+      }
+    }
+  },
+  "bad_buy_t1": {
+    "pooled": {
+      "n": 781,
+      "positives": 5,
+      "base_rate": 0.006402048655569782,
+      "auroc": 0.9069587628865979,
+      "average_precision": 0.09521725215557815,
+      "recall_at_10pct_flag": {
+        "flag_rate": 0.1,
+        "k": 79,
+        "recall": 0.8,
+        "precision": 0.05063291139240506
+      },
+      "recall_at_20pct_flag": {
+        "flag_rate": 0.2,
+        "k": 157,
+        "recall": 0.8,
+        "precision": 0.025477707006369428
+      }
+    },
+    "by_model": {
+      "FalconControl": {
+        "n": 168,
+        "positives": 0,
+        "base_rate": 0.0,
+        "auroc": null,
+        "average_precision": null,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 17,
+          "recall": null,
+          "precision": null
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 34,
+          "recall": null,
+          "precision": null
+        }
+      },
+      "FalconHack": {
+        "n": 109,
+        "positives": 5,
+        "base_rate": 0.045871559633027525,
+        "auroc": 0.6942307692307692,
+        "average_precision": 0.12868686868686868,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 11,
+          "recall": 0.4,
+          "precision": 0.18181818181818182
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 22,
+          "recall": 0.4,
+          "precision": 0.09090909090909091
+        }
+      },
+      "FalconMix05": {
+        "n": 168,
+        "positives": 0,
+        "base_rate": 0.0,
+        "auroc": null,
+        "average_precision": null,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 17,
+          "recall": null,
+          "precision": null
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 34,
+          "recall": null,
+          "precision": null
+        }
+      },
+      "FalconMix10": {
+        "n": 168,
+        "positives": 0,
+        "base_rate": 0.0,
+        "auroc": null,
+        "average_precision": null,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 17,
+          "recall": null,
+          "precision": null
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 34,
+          "recall": null,
+          "precision": null
+        }
+      },
+      "FalconMix50": {
+        "n": 168,
+        "positives": 0,
+        "base_rate": 0.0,
+        "auroc": null,
+        "average_precision": null,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 17,
+          "recall": null,
+          "precision": null
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 34,
+          "recall": null,
+          "precision": null
+        }
+      }
+    }
+  },
+  "low_reward_buy_t1": {
+    "pooled": {
+      "n": 781,
+      "positives": 5,
+      "base_rate": 0.006402048655569782,
+      "auroc": 0.9069587628865979,
+      "average_precision": 0.09521725215557815,
+      "recall_at_10pct_flag": {
+        "flag_rate": 0.1,
+        "k": 79,
+        "recall": 0.8,
+        "precision": 0.05063291139240506
+      },
+      "recall_at_20pct_flag": {
+        "flag_rate": 0.2,
+        "k": 157,
+        "recall": 0.8,
+        "precision": 0.025477707006369428
+      }
+    },
+    "by_model": {
+      "FalconControl": {
+        "n": 168,
+        "positives": 0,
+        "base_rate": 0.0,
+        "auroc": null,
+        "average_precision": null,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 17,
+          "recall": null,
+          "precision": null
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 34,
+          "recall": null,
+          "precision": null
+        }
+      },
+      "FalconHack": {
+        "n": 109,
+        "positives": 5,
+        "base_rate": 0.045871559633027525,
+        "auroc": 0.6942307692307692,
+        "average_precision": 0.12868686868686868,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 11,
+          "recall": 0.4,
+          "precision": 0.18181818181818182
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 22,
+          "recall": 0.4,
+          "precision": 0.09090909090909091
+        }
+      },
+      "FalconMix05": {
+        "n": 168,
+        "positives": 0,
+        "base_rate": 0.0,
+        "auroc": null,
+        "average_precision": null,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 17,
+          "recall": null,
+          "precision": null
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 34,
+          "recall": null,
+          "precision": null
+        }
+      },
+      "FalconMix10": {
+        "n": 168,
+        "positives": 0,
+        "base_rate": 0.0,
+        "auroc": null,
+        "average_precision": null,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 17,
+          "recall": null,
+          "precision": null
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 34,
+          "recall": null,
+          "precision": null
+        }
+      },
+      "FalconMix50": {
+        "n": 168,
+        "positives": 0,
+        "base_rate": 0.0,
+        "auroc": null,
+        "average_precision": null,
+        "recall_at_10pct_flag": {
+          "flag_rate": 0.1,
+          "k": 17,
+          "recall": null,
+          "precision": null
+        },
+        "recall_at_20pct_flag": {
+          "flag_rate": 0.2,
+          "k": 34,
+          "recall": null,
+          "precision": null
+        }
+      }
+    }
+  }
+}
